@@ -1,0 +1,28 @@
+{
+  "Comment": "Point zanthos.lighting at GitHub Pages",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "zanthos.lighting",
+        "Type": "A",
+        "TTL": 300,
+        "ResourceRecords": [
+          { "Value": "185.199.108.153" },
+          { "Value": "185.199.109.153" },
+          { "Value": "185.199.110.153" },
+          { "Value": "185.199.111.153" }
+        ]
+      }
+    },
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "www.zanthos.lighting",
+        "Type": "CNAME",
+        "TTL": 300,
+        "ResourceRecords": [ { "Value": "zanthos-inc.github.io" } ]
+      }
+    }
+  ]
+}

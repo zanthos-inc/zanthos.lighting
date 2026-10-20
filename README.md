@@ -5,9 +5,16 @@ Static site for Zanthos Landscape Lighting, Metro Boston. Plain HTML, CSS and a 
 ## Publish
 
 1. Push this repo to GitHub under the `zanthos-inc` org and enable Pages (Settings → Pages → Deploy from branch, `master`, `/`).
-2. DNS at the registrar for `zanthos.lighting`:
+2. DNS for `zanthos.lighting` (the zone is on AWS Route 53):
    - `A` records on the apex: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `CNAME` for `www` → `zanthos-inc.github.io`
+
+   With AWS credentials configured, this does both in one call (`dns/route53-github-pages.json` is in this repo):
+
+   ```
+   ZONE=$(aws route53 list-hosted-zones-by-name --dns-name zanthos.lighting --query 'HostedZones[0].Id' --output text)
+   aws route53 change-resource-record-sets --hosted-zone-id "$ZONE" --change-batch file://dns/route53-github-pages.json
+   ```
 3. In Pages settings, set the custom domain to `zanthos.lighting` and enable "Enforce HTTPS" once the check passes. The `CNAME` file in this repo must stay.
 
 ## Before launch
