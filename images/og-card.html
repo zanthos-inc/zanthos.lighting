@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..600,50&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { background: linear-gradient(180deg, #0b1526 0%, #17294a 60%, #3b4a73 100%); color: #fff1d2; font-family: "Public Sans", sans-serif; position: relative; }
+  .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; background: #0a1a1a; }
+  .lamp { position: absolute; bottom: 150px; width: 4px; height: 26px; background: #2a2a2a; }
+  .lamp::before { content: ""; position: absolute; left: 50%; top: -4px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: #ffd98a; }
+  .lamp::after { content: ""; position: absolute; left: 50%; bottom: -22px; width: 240px; height: 44px; margin-left: -120px; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(255,210,122,.8) 0%, rgba(255,184,77,.25) 55%, rgba(255,184,77,0) 100%); }
+  .text { position: absolute; left: 80px; top: 110px; width: 900px; }
+  h1 { font-family: "Fraunces", serif; font-variation-settings: "SOFT" 50, "opsz" 144; font-weight: 500; font-size: 74px; line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 28px; }
+  p { font-size: 30px; margin: 0; color: rgba(255,241,210,.85); }
+  .brand { position: absolute; left: 80px; top: 48px; font-family: "Fraunces", serif; font-size: 26px; display: flex; align-items: center; gap: 12px; }
+  .dot { width: 18px; height: 18px; border-radius: 50%; background: #f0b254; box-shadow: 0 0 24px 6px rgba(240,178,84,.45); }
+</style>
+</head>
+<body>
+  <div class="brand"><span class="dot"></span>Zanthos <em>Landscape Lighting</em></div>
+  <div class="text">
+    <h1>After dark, your home should still look like yours.</h1>
+    <p>Landscape lighting designed and installed across Metro Boston.</p>
+  </div>
+  <div class="ground"></div>
+  <div class="lamp" style="left:160px"></div>
+  <div class="lamp" style="left:440px"></div>
+  <div class="lamp" style="left:720px"></div>
+  <div class="lamp" style="left:1000px"></div>
+</body>
+</html>
